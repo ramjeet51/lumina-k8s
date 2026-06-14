@@ -21,7 +21,7 @@ spec:
       containers:
       - name: backend
 
-        image: ramjeet500/lumina-backend:42
+        image: ramjeet500/lumina-backend:44
 
         imagePullPolicy: Always
 
