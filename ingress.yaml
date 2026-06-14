@@ -1,0 +1,31 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: lumina-ingress
+  namespace: lumina
+spec:
+  ingressClassName: nginx
+
+  rules:
+
+  - host: checkops.in
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: lumina-frontend
+            port:
+              number: 3000
+
+  - host: api.checkops.in
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: lumina-backend
+            port:
+              number: 8000
