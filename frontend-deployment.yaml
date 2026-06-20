@@ -21,7 +21,7 @@ spec:
       containers:
       - name: frontend
 
-        image: ramjeet500/lumina-frontend:44
+        image: ramjeet500/lumina-frontend:45
 
         imagePullPolicy: Always
 
